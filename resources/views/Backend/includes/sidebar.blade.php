@@ -33,6 +33,11 @@
     </div>
     <div class="sb-sidenav-footer">
         <div class="small">Logged in as Admin:</div>
-        {{Auth::user()->name}}
+        
+        @auth
+            {{Auth::user()->name}}
+        @else
+            Demo Guest
+        @endauth
     </div>
 </nav>
