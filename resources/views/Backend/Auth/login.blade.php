@@ -3,7 +3,7 @@
 @section('card-header', 'Sign In To Dashboard')
 
 @section('card-body')
-    {!! Form::open([]) !!}
+    {!! Form::open(['method'=>'post', 'route'=>'login']) !!}
     {!! Form::label('email', 'Email', ['class'=>'mt-2']) !!}
     {!! Form::email('email', null, [
         'placeholder'=>'Enter you email',
