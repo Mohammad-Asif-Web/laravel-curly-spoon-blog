@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Backend\BackendController;
+use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -32,12 +33,15 @@ use Illuminate\Support\Facades\Route;
 
 require __DIR__.'/auth.php';
 
+// resourse = index, create, store, show, edit, update, destroy this 7 function will work automatic
+//      createdat2023/publicblog/adminsecurity/dashboard
 Route::get('/', [FrontendController::class, 'index'])->name('front.index');
 Route::get('single-post', [FrontendController::class, 'single'])->name('front.single');
 Route::get('about', [FrontendController::class, 'about'])->name('front.about');
 Route::get('contact', [FrontendController::class, 'contact'])->name('front.contact');
 
-//      createdat2023/publicblog/adminsecurity/dashboard
+
 Route::group(['prefix'=>'dashboard'], function(){
     Route::get('/', [BackendController::class, 'index'])->name('back.index');
+    Route::resource('category', CategoryController::class);
 });

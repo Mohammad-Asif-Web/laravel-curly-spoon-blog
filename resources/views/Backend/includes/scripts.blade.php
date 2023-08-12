@@ -8,5 +8,10 @@
 {{-- datatables --}}
 <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
 <script src="{{asset('Backend/js/datatables-simple-demo.js')}}"></script>
+{{-- sweet alert2 --}}
+<script src="{{asset('Backend/js/sweetalert2.all.min.js')}}"></script>
+
+@stack('js')
+
 </body>
 </html>
