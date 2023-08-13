@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Backend\BackendController;
 use App\Http\Controllers\Backend\CategoryController;
+use App\Http\Controllers\Backend\PostController;
 use App\Http\Controllers\Backend\SubCategoryController;
 use App\Http\Controllers\Backend\TagController;
 use App\Http\Controllers\Frontend\FrontendController;
@@ -47,6 +48,10 @@ Route::get('contact', [FrontendController::class, 'contact'])->name('front.conta
 Route::group(['prefix'=>'dashboard'], function(){
     Route::get('/', [BackendController::class, 'index'])->name('back.index');
     Route::resource('category', CategoryController::class);
-    Route::resource('tag', TagController::class);
+    // sub-category url for get sub-category item by select category dropdown in axios
+    Route::get('get-subcategory/{id}', [SubCategoryController::class, 'getSubCategoryByCategorySelect']);
     Route::resource('sub-category', SubCategoryController::class);
+    Route::resource('tag', TagController::class);
+    Route::resource('post', PostController::class);
 });
+

@@ -120,4 +120,18 @@ class SubCategoryController extends Controller
         session()->flash('cls', 'error');
         return redirect()->route('sub-category.index');
     }
+
+    public function getSubCategoryByCategorySelect(int $id){
+        // we can get 'name, id' data by 'pluck()' function. 
+        // but in Javascript, Laravel 'pluck()' function makes some problem. 
+        // that's why we will use 'select()' to get data for using ajax axios.
+        $sub_categories = SubCategory::select('id','name')->where('category_id', $id)->get();
+
+        // we have to send this data to javascript, so we have to convert it as json
+        // also this is a kind of api system to send data, 
+        // because an api only works to send and receive data
+        return response()->json($sub_categories);
+
+
+    }
 }
