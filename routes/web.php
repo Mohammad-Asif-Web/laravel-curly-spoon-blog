@@ -2,10 +2,12 @@
 
 use App\Http\Controllers\Backend\BackendController;
 use App\Http\Controllers\Backend\CategoryController;
+use App\Http\Controllers\Backend\SubCategoryController;
 use App\Http\Controllers\Backend\TagController;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -46,4 +48,5 @@ Route::group(['prefix'=>'dashboard'], function(){
     Route::get('/', [BackendController::class, 'index'])->name('back.index');
     Route::resource('category', CategoryController::class);
     Route::resource('tag', TagController::class);
+    Route::resource('sub-category', SubCategoryController::class);
 });
