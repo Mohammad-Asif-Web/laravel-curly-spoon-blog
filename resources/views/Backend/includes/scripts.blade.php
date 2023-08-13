@@ -10,6 +10,8 @@
 <script src="{{asset('Backend/js/datatables-simple-demo.js')}}"></script>
 {{-- sweet alert2 --}}
 <script src="{{asset('Backend/js/sweetalert2.all.min.js')}}"></script>
+{{-- axios --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js" integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 @stack('js')
 
