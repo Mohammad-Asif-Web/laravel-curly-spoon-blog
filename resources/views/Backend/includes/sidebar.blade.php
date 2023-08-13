@@ -22,8 +22,8 @@
             </a>
             <div class="collapse" id="Posts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                 <nav class="sb-sidenav-menu-nested nav">
-                    <a class="nav-link" href="{{route('category.create')}}">Create Category</a>
-                    <a class="nav-link" href="{{route('category.index')}}">Category List</a>
+                    <a class="nav-link" href="{{route('post.create')}}">Create Post</a>
+                    <a class="nav-link" href="{{route('post.index')}}">Post List</a>
                 </nav>
             </div>
                 {{-- Category --}}
@@ -38,6 +38,18 @@
                     <a class="nav-link" href="{{route('category.index')}}">Category List</a>
                 </nav>
             </div>
+                {{-- Sub Category --}}
+            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#sub-category" aria-expanded="false" aria-controls="sub-category">
+                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                Sub Category
+                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+            </a>
+            <div class="collapse" id="sub-category" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                <nav class="sb-sidenav-menu-nested nav">
+                    <a class="nav-link" href="{{route('sub-category.create')}}">Create Sub Category</a>
+                    <a class="nav-link" href="{{route('sub-category.index')}}">Sub Category List</a>
+                </nav>
+            </div>
                 {{-- Tags --}}
             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#Tags" aria-expanded="false" aria-controls="Tags">
                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
@@ -46,8 +58,8 @@
             </a>
             <div class="collapse" id="Tags" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                 <nav class="sb-sidenav-menu-nested nav">
-                    <a class="nav-link" href="{{route('category.create')}}">Create Category</a>
-                    <a class="nav-link" href="{{route('category.index')}}">Category List</a>
+                    <a class="nav-link" href="{{route('tag.create')}}">Create Tag</a>
+                    <a class="nav-link" href="{{route('tag.index')}}">Tag List</a>
                 </nav>
             </div>
                 {{-- Comments --}}
